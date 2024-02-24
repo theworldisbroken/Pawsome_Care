@@ -1,0 +1,31 @@
+// Login mit Basic Authentication als admin mit korrekten Credentials
+###
+# @name loginAdmintoken
+GET http://localhost/api/authenticate
+Authorization: Basic admin:123
+
+@adminToken = {{loginAdmintoken.response.headers.Authorization}}
+
+### Abrufen der User mit dem AdminToken
+GET http://localhost/api/users
+Authorization: {{adminToken}}
+
+### Abrufen des Profils mit dem AdminToken
+GET http://localhost/api/profile/admin
+Authorization: {{adminToken}}
+
+### Updaten eines Profils
+PATCH http://localhost/api/profile/admin
+Content-Type: application/json
+Authorization: {{adminToken}}
+
+{
+    "aboutme": "Ein Text über mich",
+    "location": "Berlin",
+    "dog": true,
+    "cat": true,
+    "activities": [
+            { "name": "Hausbesuch", "price": 10 },
+            { "name": "Gassi gehen", "price": 5 }
+        ]
+}

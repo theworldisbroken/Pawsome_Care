@@ -1,0 +1,30 @@
+// Login mit Basic Authentication als admin mit korrekten Credentials
+###
+# @name loginAdmintoken
+GET http://localhost/api/authenticate
+Authorization: Basic admin:123
+
+@adminToken = {{loginAdmintoken.response.headers.Authorization}}
+
+### Abrufen der User mit dem AdminToken
+GET http://localhost/api/users
+Authorization: {{adminToken}}
+
+### Abrufen des PetPasses mit dem AdminToken
+GET http://localhost/api/petpass/
+Authorization: {{adminToken}}
+
+### Erstellen eines PetPasses
+POST http://localhost/api/petpass
+Content-Type: application/json
+Authorization: {{adminToken}}
+
+{
+    "creator": "6557a7d3bb4694f3564e8929",
+    "art": "Hund",
+    "name": "Harry",
+    "rasse": "Dackel",
+    "alter": "3",
+    "groesse": "mittel"
+
+}

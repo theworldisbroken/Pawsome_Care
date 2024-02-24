@@ -1,0 +1,112 @@
+// Login mit Basic Authentication als admin mit korrekten Credentials
+###
+# @name loginAdmintoken
+GET http://localhost/api/authenticate
+Authorization: Basic admin:123
+
+@adminToken = {{loginAdmintoken.response.headers.Authorization}}
+
+// Login mit Basic Authentication als sarah mit korrekten Credentials
+###
+# @name loginSarahToken
+GET http://localhost/api/authenticate
+Authorization: Basic sarah:123
+
+@sarahToken = {{loginSarahToken.response.headers.Authorization}}
+
+### 
+GET http://localhost:80/api/forum/category/haustiersitting
+
+###
+# @name post1
+POST http://localhost:80/api/forum
+Authorization: {{adminToken}}
+Content-Type: application/json
+
+{
+  "title": "Futter?",
+  "content": "Zur Pflege von Katzen gehört die Fellpflege, bei der Sie das Tier gleichzeitig nach Hautparasiten wie Zecken oder Flöhen absuchen können. Vor allem langhaarige Tiere sollten Sie regelmäßig bürsten oder kämmen. Vernachlässigen Sie hierbei auch nicht die Zähne und Ohren Ihrer Katze.",
+  "user": "656f55a59b30ba923607b155",
+  "comment": [
+    {
+      "user": "656f55a59b30ba923607b155",
+      "content": "Hallo meine lieben!"
+    }
+  ],
+  "category": "Futter"
+}
+###
+@postID = {{post1.response.body._id}}
+
+###
+POST http://localhost:80/api/forum
+Authorization: {{adminToken}}
+Content-Type: application/json
+
+{
+  "title": "Welches Futter ist das beste?",
+  "content": "Das Futter Ihres Hundes sollte daher aus mindestens 70 Prozent Fleisch bestehen. Dabei können prinzipiell fast alle Fleischsorten gefüttert werden: Rind, Lamm, Schwein, Kaninchen oder Geflügel. An Innereien empfehlen sich Leber, Herz, Nieren, Milz und Pansen (ungeputzt).",
+  "user": "655400344b6745a042dc0e47",
+  "category": "Futter"
+}
+
+###
+POST http://localhost:80/api/users
+Content-Type: application/json
+
+{
+  "userID": "user123456",
+  "email": "user123456@example.com",
+  "firstName": "Alex",
+  "lastName": "Doe",
+  "password": "someuser",
+  "isAdministrator": false,
+  "isVerified": true,
+  "verifiedIdentity": true
+}
+
+###
+GET http://localhost:80/api/forum/{{postID}}
+
+###
+PUT http://localhost:80/api/forum/{{postID}}
+Authorization: {{sarahToken}}
+Content-Type: application/json
+
+{
+  "title": "Wie pflege ich meine Katze?",
+  "content": "Zur Pflege von Katzen gehört die Fellpflege, bei der Sie das Tier gleichzeitig nach Hautparasiten wie Zecken oder Flöhen absuchen können. Vor allem langhaarige Tiere sollten Sie regelmäßig bürsten oder kämmen. Vernachlässigen Sie hierbei auch nicht die Zähne und Ohren Ihrer Katze.",
+  "user": "655402da1500ca7ef4d009cf",
+  "category": "Haustierliebe"
+}
+
+
+###
+DELETE http://localhost:80/api/forum/{{postID}}
+Authorization: {{sarahToken}}
+
+// must get id from token and not from body
+###
+POST http://localhost:80/api/forum/656f57d29b30ba923607b1ca/comment
+Authorization: {{adminToken}}
+Content-Type: application/json
+
+{
+    "content": "Das ist ein neuer Kommentar!"
+}
+
+###
+GET http://localhost:80/api/forum/search/Futter
+
+###
+PUT http://localhost:80/api/forum/{{postID}}/comment/6564ac723a9008fbe7ac1860
+Authorization: {{sarahToken}}
+Content-Type: application/json
+
+{
+    "content": "Das ist der bearbeitete Kommentar!"
+}
+
+###
+DELETE http://localhost:80/api/forum/{{postID}}/comment/6564ac723a9008fbe7ac1860
+Authorization: {{sarahToken}}

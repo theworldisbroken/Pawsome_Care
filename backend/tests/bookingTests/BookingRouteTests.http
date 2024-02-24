@@ -1,0 +1,78 @@
+// Login mit Basic Authentication als admin mit korrekten Credentials
+###
+# @name loginAdmintoken
+GET http://localhost/api/authenticate
+Authorization: Basic admin:123
+
+@adminToken = {{loginAdmintoken.response.headers.Authorization}}
+
+### Abrufen der User mit dem AdminToken
+GET http://localhost/api/users
+Authorization: {{adminToken}}
+
+
+
+### Erstellen einer Buchung
+POST http://localhost/api/booking
+Content-Type: application/json
+Authorization: {{adminToken}}
+
+{
+    "creator": "653eac52e8cb8db3d9427f4c",
+    "dates": ["2023-11-01T15:00","2023-11-01T15:15","2023-11-01T15:30","2023-11-01T15:45"]
+}
+
+### Löschen aller Buchungen
+DELETE http://localhost/api/booking/?creator=653eac52e8cb8db3d9427f4c&dates=2023-11-01T15:00&dates=2023-11-01T15:15&dates=2023-11-01T15:30&dates=2023-11-01T15:45
+Authorization: {{adminToken}}
+
+### Löschen bestimmter Buchungen
+DELETE http://localhost/api/booking/?creator=653eac52e8cb8db3d9427f4c&dates=2023-11-01T15:00&dates=2023-11-01T15:15
+Authorization: {{adminToken}}
+
+### Abrufen aller Buchungen mit dem AdminToken
+GET http://localhost/api/booking/
+Authorization: {{adminToken}}
+
+### Abrufen bestimmter Buchungen 
+GET http://localhost/api/booking/?creator=653eac52e8cb8db3d9427f4c&date=2023-11-01T15:00
+Authorization: Bearer {{adminToken}}
+
+### Requesten einer Buchung
+PATCH http://localhost/api/booking/request
+Content-Type: application/json
+Authorization: {{adminToken}}
+
+{
+    "creator": "653eac52e8cb8db3d9427f4c",
+    "dates": ["2023-11-01T15:30","2023-11-01T15:45"],
+    "bookedBy": "653fcc554b7f49f455e68c9a",
+    "activities": ["gassi", "tierarzt"],
+    "remarks": "hi"
+}
+
+### Abrufen bestimmter Buchungen 
+GET http://localhost/api/booking/?status=requested
+Authorization: Bearer {{adminToken}}
+
+### Akzeptieren einer Buchung
+PATCH http://localhost/api/booking/manage
+Content-Type: application/json
+Authorization: {{adminToken}}
+
+{
+    "creator": "653eac52e8cb8db3d9427f4c",
+    "dates": ["2023-11-01T15:30","2023-11-01T15:45"],
+    "action": "accept"
+}
+
+### Ablehnen einer Buchung
+PATCH http://localhost/api/booking/manage
+Content-Type: application/json
+Authorization: {{adminToken}}
+
+{
+    "creator": "653eac52e8cb8db3d9427f4c",
+    "dates": ["2023-11-01T15:30","2023-11-01T15:45"],
+    "action": "decline"
+}

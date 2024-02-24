@@ -1,0 +1,126 @@
+// Login mit Basic Authentication als admin mit korrekten Credentials
+###
+# @name loginAdmintoken
+GET http://localhost/api/authenticate
+Authorization: Basic admin:123
+
+@adminToken = {{loginAdmintoken.response.headers.Authorization}}
+
+// Login mit Basic Authentication als admin mit Email
+###
+# @name loginAdmintoken
+GET http://localhost/api/authenticate
+Authorization: Basic admin@bht-berlin.de:123
+
+// Login mit Basic Authentication als admin mit korrekten Credentials in Base64
+###
+GET http://localhost/api/authenticate
+Authorization: Basic YWRtaW46MTIz
+
+
+// Login mit Basic Authentication als admin mit falschen Credentials --> Anfrage muss scheitern mit 401
+###
+GET http://localhost/api/authenticate
+Authorization: Basic admin:12333
+
+
+### Auflisten aller Nutzer, ohne Token --> Anfrage muss scheitern mit 401 
+http://localhost/api/users
+
+
+### Auflisten aller Nutzer als admin
+http://localhost/api/users
+Authorization: {{adminToken}}
+
+
+### Anlegen einen neuen user sarah(Registrierung)
+# Ein Temp Email von tempail.com holen, um zu testen 
+POST http://localhost/api/users
+Content-Type: application/json
+
+{
+    "userID": "Sarah",
+    "email": "pedratisti@gufum.com",
+    "firstName": "Sarah",
+    "lastName": "Mustermann",
+    "password": "123"
+}
+
+
+### Abrufen des Users sarah mit dem AdminToken
+GET http://localhost/api/users/sarah
+Authorization: {{adminToken}}
+
+### Abrufen des Users ohne token sarah mit beschränkten Daten angezeigt
+GET http://localhost/api/users/user/sarah
+
+// Login mit Basic Authentication als sarah mit korrekten Credentials
+###
+# @name loginSarahToken
+GET http://localhost/api/authenticate
+Authorization: Basic sarah:123
+
+@sarahToken = {{loginSarahToken.response.headers.Authorization}}
+
+
+// Login mit Basic Authentication als sarah mit falschen Credentials --> Anfrage muss scheitern mit 401
+###
+GET http://localhost/api/authenticate
+Authorization: Basic sarah:1233
+
+
+### Auflisten aller Nutzer als sarah --> Anfrage muss scheitern mit 401
+GET http://localhost/api/users
+Authorization: {{sarahToken}}
+
+
+### Abrufen des Users sarah selbst
+GET http://localhost/api/users/sarah
+Authorization: {{sarahToken}}
+
+
+### Abrufen des Users sarah von Admin --> Anfrage muss scheitern mit 401
+GET http://localhost/api/users/admin
+Authorization: {{sarahToken}}
+
+
+// Ändere beim User sarah die Veriablen als Sarah selbst
+###
+PUT http://localhost/api/users/sarah
+Content-Type: application/json
+Authorization: {{sarahToken}}
+
+{
+    "firstName": "Sandraass",
+    "lastName": "SMeierrs"
+}
+
+// Ändere beim User sarah die erlaubten Veriablen
+###
+PUT http://localhost/api/users/sarah
+Content-Type: application/json
+Authorization: {{sarahToken}}
+
+{
+    "userID": "Lara"
+}
+
+// Ändere beim User sarah die Veriablen als admin(ohne Einschränkungen)
+###
+PUT http://localhost/api/users/sarah
+Content-Type: application/json
+Authorization: {{adminToken}}
+
+{
+    "userID": "Lara"
+}
+
+
+### Lösche den User Lara
+DELETE http://localhost/api/users/Lara
+Authorization: {{adminToken}}
+
+
+### Auflisten aller Nutzer als admin
+http://localhost/api/users
+Authorization: {{adminToken}}

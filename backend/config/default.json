@@ -1,0 +1,14 @@
+{
+    "db": {
+        "connectionOptions": {
+            "useNewUrlParser": true,
+            "useUnifiedTopology": true
+        },
+        "connectionString": "mongodb://127.0.0.1:27017/Pawsome_Care"
+    },
+    "session": {
+        "privateKey": "pawwwsomeeeCaree",
+        "timeout": 600000
+    },
+    "FrontendUrl": "http://localhost:3000/activation/"
+}
