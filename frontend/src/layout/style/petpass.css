@@ -1,0 +1,126 @@
+/* Petpass styling --------------------------------------- */
+
+
+/* Petpass card styling --------------------------------------- */
+
+.petpass-wrapper .content-box {
+  margin-bottom: 1rem;
+}
+
+.petpass-content {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+
+.petpass-image {
+  border-radius: 10px;
+}
+
+.petpass-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.peticon-name {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.petpass-input {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  white-space: nowrap;
+}
+
+/* aligns child elements vertically */
+.petpass-input > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.petpass-input > div:first-child {
+  width: 15rem;
+}
+
+/* PetpassModal --------------------------------------- */
+
+.edit-petpass-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.upload-petpass-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+input[type="radio"],
+.edit-petpass-details select,
+.edit-petpass-details label,
+.image-upload img {
+  cursor: pointer;
+}
+
+.edit-petpass-details {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.edit-petpass-details > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* style for inputboxes */
+.edit-petpass-details input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+}
+
+/* style for checkboxes */ 
+.edit-petpass-details input[type="checkbox"] {
+  margin-right: 10px; 
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* style for select elements */
+.edit-petpass-details select {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+/* centers checkboxes with text */
+.checkbox-name {
+  display: flex;
+  align-items: center; 
+}
+
+/* gap between cat and dog*/
+#dog {
+  margin-right: 2rem;
+}
+
+/* gap between label and radio button*/
+label[for="cat"],
+label[for="dog"] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+
+.petpass-form-container > div:last-child{
+  display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}

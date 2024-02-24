@@ -1,0 +1,10 @@
+.gallery-content {
+  display: flex;
+  gap:2rem;
+  justify-content: center;
+}
+
+.gallery-content img {
+  border-radius: 20px;
+  white-space: nowrap;
+}

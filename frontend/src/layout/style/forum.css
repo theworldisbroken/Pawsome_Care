@@ -1,0 +1,224 @@
+@import url('https://fonts.cdnfonts.com/css/work-sans');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.forum-startseite-body {
+  background-color: #D9C3A9;
+}
+
+.forum-startseite-container {
+  display: flex;
+  background-color: #e9ddcb;
+  max-width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 65rem;
+  margin: auto;
+  position: relative;
+  /* border-radius: 30px; */
+  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); */
+  padding-top: 50px;
+}
+
+.forum-categories-container {
+  display: flex;
+  background-color: #e9ddcb;
+  max-width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 65rem;
+  margin: auto;
+  position: relative;
+  /* border-radius: 30px; */
+  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); */
+  padding-top: 150px;
+}
+
+.forum-startseite>.header-forum {
+  width: 100%;
+  position: relative;
+  top: 2rem;
+  padding: 0 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-forum>img {
+  max-height: 280px;
+}
+
+.forum-categories-container .header-forum {
+  padding: 20px 25px;
+}
+
+.forummain-hr {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  border: 1px solid #83614e;
+}
+
+/**
+* 
+*/
+.header-forumcategory {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 14px;
+}
+
+.kategorien-headline-legend {
+  color: #000000;
+  font-family: 'Dancing Script', cursive;
+  font-size: 44px;
+  font-weight: 400;
+  position: relative;
+  top: 9.5rem;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  margin-left: 30px;
+}
+
+.forummain-searchbar {
+  position: relative;
+  top: 9rem;
+}
+
+.kategorien-headline {
+  color: #000000;
+  font-family: 'Dancing Script', cursive;
+  font-size: 44px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  margin-left: 30px;
+}
+
+/* grid layout */
+.kategorien {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+  justify-items: center;
+
+  left: 0;
+  position: relative;
+  width: 100%;
+}
+
+/* grid item */
+.category-preview {
+  height: 260px;
+  width: 220px;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #937869;
+  text-align: center;
+
+  border-radius: 20px;
+  top: 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  margin-bottom: 45px;
+  cursor: pointer;
+}
+
+.category-preview>img {
+  width: auto;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.category-preview>.text {
+  color: #fff9f1;
+  font-family: "Fredoka-SemiBold", Helvetica;
+  font-size: 24px;
+  font-weight: 600;
+  left: 0;
+  letter-spacing: -0.48px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0px 4px 4px #00000040;
+  height: 100px;
+  bottom: -11px;
+  width: 100%;
+  line-height: 100px;
+  background-color: #937869;
+  background: linear-gradient(0deg, rgba(147, 120, 105, 1) 2%, rgba(147, 120, 105, 0) 100%);
+}
+
+/**
+*Create Button in ForumCategory
+*/
+
+.custom-create-button {
+  display: inline-block;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  background-color: #77503A;
+  color: #ffffff;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+
+.custom-create-button:hover {
+  background-color: #83614e;
+  transform: scale(1.05);
+}
+
+.credits-footer-forum,
+.credits-footer-mainforum {
+  margin-top: 10rem;
+  background-color: #e9ddcb;
+  border-top: 1px solid #000;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  min-height: 3.5rem;
+  margin: auto;
+  max-width: 80%;
+  width: 65rem;
+}
+
+.credits-footer-forum a,
+.credits-footer-mainforum a,
+.credits-footer-forum p,
+.credits-footer-mainforum p {
+  margin: auto;
+  color: #000;
+  font-size: large;
+}
+
+/**
+* Back Button
+*/
+.back-button {
+  display: inline-block;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  background-color: #77503A;
+  color: #ffffff;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #83614e;
+  transform: scale(1.05);
+}

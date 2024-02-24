@@ -1,0 +1,151 @@
+/* style for all reusable action buttons 
+* save button
+* closing button
+* edit button
+* contact button
+* like button 
+* delete button
+* create button
+* reset button
+* text button
+* submit button
+*/
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  border: none;
+  color: #000000;
+  background-color: #F8BCBC;
+}
+
+.text-btn {
+  font-size: 0.8rem;
+  color: rgb(175, 175, 175);
+  border: none;
+  background: none;
+}
+
+.text-btn:hover {
+  cursor: pointer;
+}
+
+.save-btn {
+  border: none;
+  border-radius: 30px;
+  background-color: #F8BCBC;
+  padding: 1rem 2rem;
+  float: right; /* moves button to the right edge of next block-level container */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+  border: none;
+  background: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  float: right;
+}
+
+.edit-btn {
+  margin-left: auto;
+}
+
+.delete-btn {
+  align-self: flex-end;
+}
+
+.create-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 30px;
+  background-color: #F8BCBC;
+  color: #ffffff;
+  font-size: 1.5rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.create-btn-green {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 30px;
+  background-color: green;
+  color: #ffffff;
+  font-size: 1.5rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reset-btn {
+  border: none;
+  border-radius: 30px;
+  background-color: #e4e4e4;
+  padding: 1rem 2rem;
+  float: right; /* moves button to the right edge of next block-level container */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.homepage-btn {
+  border: none;
+  border-radius: 30px;
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  float: right; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.delete-btn,
+.setting-btn,
+.edit-btn button,
+.like-btn,
+.contact-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.delete-btn,
+.setting-btn,
+.edit-btn button{
+  opacity: 30%;
+}
+
+.submit-btn,
+.reset-btn,
+.create-btn:hover,
+.setting-btn:hover,
+.save-btn:hover,
+.close-btn:hover,
+.edit-btn button:hover,
+.homepage-btn {
+  cursor: pointer;
+}
+
+.setting-btn img:hover,
+.contact-btn img:hover,
+.like-btn img:hover,
+.edit-btn button:hover,
+.homepage-btn:hover {
+  transform: scale(1.1);
+}
+
+.save-btn:active {
+    transform: scale(0.95); /* button shrinks when clicking */
+}
+
+.reset-btn:hover {
+  background-color: #d6d6d6;
+}
+
+.homepage-btn:hover {
+  background-color: #f3f3f3;
+}
+.submit-btn:hover,
+.create-btn:hover,
+.save-btn:hover {
+  background-color: #ffcaca;
+}

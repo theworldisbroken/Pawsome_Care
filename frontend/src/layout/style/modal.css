@@ -1,0 +1,65 @@
+/* modal component which includes:
+* a dark overlay
+* a box for the content
+* a headline
+* a closing button
+* a saving button
+* a reset button
+*/
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* ensures that it appears above other content */
+}
+
+/* container size to the display size */
+.modal-container {
+  width: 90%;
+  max-width: 700px; 
+  height: auto;
+  
+}
+
+/* modal heading style */
+.modal-container h2 {
+  font-size: 1rem;
+  color: white;
+}
+
+/* box for content */
+.modal-box {
+  width: auto;
+  padding: 1rem; /*content starts at 1 rem */
+  margin: 1rem 0 1rem 0; /*1rem spacing on top and bottom*/
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inbox-heading {
+  font-weight: bold;
+}
+
+.h2-close-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scrollbox {
+  max-height: 540px;
+  overflow: auto;
+}
+
+.modal-container > div:last-child {
+display: flex;
+justify-content: flex-end;
+gap: 1rem;
+}

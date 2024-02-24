@@ -1,0 +1,210 @@
+.forum-createPost-container {
+    display: flex;
+    background-color: #e9ddcb;
+    max-width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 65rem;
+    height: 70rem;
+    margin: auto;
+    position: relative;
+    padding-top: 50px;
+}
+
+.createPost-kategorien-headline {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24.3rem;
+    color: #000000;
+    font-family: 'Dancing Script', cursive;
+    font-size: 44px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    white-space: nowrap;
+    margin-left: 1.6rem;
+}
+
+
+.createPost-kategorien-headline img {
+    margin-right: 5rem;
+    width: 20rem;
+    position: relative;
+    top: 2rem;
+}
+
+.author-section {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 6rem;
+    right: 1rem;
+    width: 50%;
+}
+
+.author-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 35px;
+    margin-left: 15px;
+}
+
+.button-section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 8rem;
+    padding: 20px;
+}
+
+.select-label {
+    margin-right: 0.6rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.edit-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.input-field {
+    margin-left: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 10rem;
+}
+
+.input-field-categories{
+    margin-left: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 10rem;
+}
+
+.input-field-img {
+    position: relative;
+    bottom: 7.5rem;
+}
+
+.select-options {
+    margin-Top: 2rem;
+    margin-Bottom: 2rem;
+}
+
+.title-input {
+    width: 60%;
+    padding: 8px 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border: 0px;
+}
+
+.content-input {
+    border: 0px;
+    width: 80%;
+    height: 150px;
+    padding: 20px 10px;
+    border-radius: 30px;
+    font-size: 16px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.title-input:focus,
+.content-input:focus {
+    outline: 1px solid #020202;
+}
+
+
+/**
+* save and delete
+*/
+.save-button,
+.delete-button {
+    display: inline-block;
+    padding: 12px 11px;
+    font-size: 15px;
+    margin: 2px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    background-color: #77503A;
+    color: #ffffff;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: #f0ecec;
+    color: #000000;
+    border: 1px solid #808080;
+}
+
+.delete-button:hover {
+    background-color: #e0e0e0;
+}
+
+.save-button:hover {
+    background-color: #83614e;
+}
+
+.edit-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.input-field-inputs {
+    display: flex;
+    gap: 16.5rem;
+}
+
+.input-field-categories select,
+.input-field select {
+    background: linear-gradient(40deg, #77503A, #bd8565);
+    background-color: #77503A;
+    color: white;
+    padding: 8px;
+    border-radius: 20px;
+    width: 180px;
+    border: none;
+    font-size: 17px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.input-field-categories option,
+.input-field option {
+    padding: 60px;
+}
+
+.post-container-single .input-field {
+    top: 1rem;
+    margin-left: 0rem;
+}
+
+.file-input-createPost {
+    display: none;
+}
+
+.file-input-createPost-label {
+    position: relative;
+    background: linear-gradient(40deg, #77503A, #bd8565);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    padding: 11px 32px;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+}

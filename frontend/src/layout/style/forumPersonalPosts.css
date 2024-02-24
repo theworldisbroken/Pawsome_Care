@@ -1,0 +1,37 @@
+.search-posts-container,
+.personal-posts {
+    width: 95%;
+}
+
+.personal-posts-header {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3.5rem;
+    gap: 20rem;
+    justify-content: start;
+    align-items: center;
+}
+
+.personal-posts-legend {
+    margin-bottom: 4rem;
+    margin-right: 10rem;
+    text-decoration: underline;
+}
+
+.personal-posts-count {
+    margin-right: auto;
+    margin-left: 1.7rem;
+    position: relative;
+    bottom: 4rem;
+    font-size: 27px;
+}
+
+.personal-posts-img {
+    max-width: 14rem;
+}
+
+.personal-posts .post-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}

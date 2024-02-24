@@ -1,0 +1,161 @@
+/*reviews style ------------------------ */
+
+/* posts in column with gap */
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/*review item style ------------------------ */
+.pin-wrapper, .speech-bubble-content {
+  display: flex;
+}
+
+.profile-username-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.3rem;
+font-size: 0.8rem;
+cursor: pointer;
+text-decoration: none;
+color: inherit;
+}
+
+.mini-profile-image {
+  border-radius: 100px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.speech-bubble-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+}
+
+.speech-bubble {
+  background: #ffffff;
+  border-radius: 20px;
+  min-height: 80px;
+  width: 100%;
+  border: 1px solid rgb(224, 224, 224);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.speech-bubble-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.speech-bubble-content > div:first-child {
+  display: flex;
+  gap: 0.5rem;
+} 
+
+.speech-bubble-content > div:last-child {
+  font-size: 0.8rem;
+  color: rgb(175, 175, 175);
+  white-space: nowrap;
+} 
+
+.reply-item,
+.speech-bubble-content,
+.speech-bubble-content2 > p {
+  overflow-wrap: break-word; 
+  word-break: break-all; 
+}
+
+.speech-bubble-content2 {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.speech-bubble-content2 > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reply-item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  min-height: 3rem;
+  color: #afafaf;
+  padding: 0.3rem;
+}
+
+.reply-item > div:first-child {
+display: flex;
+justify-content: space-between
+}
+
+.reply-items .text-btn {
+  visibility: hidden;
+}
+
+.reply-item:hover .text-btn {
+  visibility: visible;
+}
+
+.review-options {
+  margin-left: auto;
+  margin-right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.review-options .text-btn {
+  visibility: hidden;
+}
+
+.speech-bubble-container:hover .text-btn {
+  visibility: visible;
+}
+
+/*review modal style ------------------------ */
+
+.reply-to-text {
+  overflow-wrap: break-word; 
+  word-break: break-all; 
+}
+
+.reply-to-text p{
+  font-weight: bold;
+}
+
+/*review style ------------------------ */
+
+.review-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-wrapper .content-box {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+.review-wrapper .mini-profile-image {
+  margin: 0;
+}
+
+.review-wrapper .reply-item {
+justify-content: flex-end;
+}
+
+.review-wrapper .speech-bubble-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.review-wrapper:hover .text-btn {
+  visibility: visible;
+}

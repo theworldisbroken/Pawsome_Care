@@ -1,0 +1,115 @@
+.rdp {
+  --rdp-cell-size: 39px;
+  /* Size of the day cells. */
+  --rdp-caption-font-size: 18px;
+  /* Font size for the caption labels. */
+  --rdp-accent-color: #ffffff;
+  /* Accent color for the background of selected days. */
+  --rdp-background-color: #e7edff;
+  /* Background color for the hovered/focused elements. */
+  --rdp-outline: 2px solid var(--rdp-accent-color);
+  /* Outline border for focused elements */
+  --rdp-outline-selected: 3px solid var(--rdp-accent-color);
+  /* Outline border for focused _and_ selected elements */
+  --rdp-selected-color: black;
+  /* Color of selected day text */
+
+
+  margin: 0em;
+}
+
+.rdp-day_today:not(.rdp-day_outside) {
+  font-weight: normal;
+}
+
+
+.rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: rgb(0, 0, 0, 0.1);
+}
+
+.rdp-button:hover:not([disabled]) {
+  background-color: rgb(0, 0, 0, 0.1);
+}
+
+.booking-rdp .rdp-weeknumber,
+.booking-rdp .rdp-day {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  width: var(--rdp-cell-size);
+  max-width: var(--rdp-cell-size);
+  height: var(--rdp-cell-size);
+  margin: 3px;
+  border: 0px solid transparent;
+  border-radius: 100%;
+}
+
+.booking-rdp .rdp-day:not([disabled]) {
+  transition: all 0.2s ease;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2)
+}
+
+.booking-rdp .rdp-day_selected,
+.booking-rdp .rdp-day_selected:focus-visible,
+.booking-rdp .rdp-day_selected:hover {
+  color: var(--rdp-selected-color);
+  opacity: 1;
+  background-color: var(--rdp-accent-color);
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.5);
+  transform: scale(0.98);
+}
+
+.booking-rdp .rdp-day_selected:not([disabled]),
+.booking-rdp .rdp-day_selected:focus-visible:not([disabled]),
+.booking-rdp .rdp-day_selected:hover:not([disabled]) {
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.5);
+  transform: scale(0.98);
+}
+
+
+.availability-rdp .rdp-button:not([disabled]) {
+  cursor: default;
+}
+
+.availability-rdp .rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: white;
+}
+
+.availability-rdp .rdp-weeknumber,
+.availability-rdp .rdp-day {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  width: var(--rdp-cell-size);
+  max-width: var(--rdp-cell-size);
+  height: var(--rdp-cell-size);
+  border-radius: 0;
+}
+
+.booking-rdp .rdp-day_range_middle {
+  border-radius: 100%;
+}
+
+.booking-rdp .rdp-day_range_start {
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+.booking-rdp .rdp-day_range_end.rdp-day_range_start {
+  border-radius: 100%;
+}
+
+
+.rdp:not([dir='rtl']) .rdp-day_range_end:not(.rdp-day_range_start) {
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+
+.rdp:not([dir='rtl']) .rdp-day_range_start:not(.rdp-day_range_end) {
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}

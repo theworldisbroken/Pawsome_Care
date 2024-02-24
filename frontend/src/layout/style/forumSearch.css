@@ -1,0 +1,78 @@
+.search-container{
+    display: flex;
+    background-color: #e9ddcb;
+    max-width: 80%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    width: 65rem;
+    min-height: 58rem;
+    margin: auto;
+    position: relative;
+}
+
+.search-header{
+    margin-right: auto;
+    margin-left: 2rem;
+    margin-bottom: 4rem;
+}
+
+.search-legend{
+    margin-top: 5rem;
+    font-size: 29px;
+}
+
+.search-header-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    align-items: flex-start;
+}
+
+.search-header-forum{
+    position: relative;
+    top: 5rem;
+}
+
+.search-header-container img{
+    margin-left: 14rem;
+}
+
+.search-searchbar{
+    position: relative;
+    bottom: 12rem;
+}
+
+.search-posts-container{
+    position: relative;
+    bottom: 8.5rem;
+    margin-bottom: 2.3rem;
+}
+
+.search-post-close-btn{
+    background-color: #755341;
+    bottom: 2rem;
+    max-width: 100%;
+    color: #FFFFFF;
+    font-family: 'Antonio', sans-serif;
+    font-size: 22px;
+    border-radius: 15px;
+    text-decoration: none;
+    padding: 6px 10px;
+    border: 0px;
+    width: 3.5rem;
+    height: 2.7rem;
+    margin-right: auto;
+    margin-left: 10.2rem;
+}
+
+.search-post-close-btn:hover{
+    cursor: pointer;
+    background-color: #83614e;
+}
+
+.search-posts-container .post-container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}

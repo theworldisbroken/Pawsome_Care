@@ -1,0 +1,326 @@
+.settings-body {
+    background-color: #D9C3A9;
+}
+
+.settings-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 95%;
+    border-radius: 20px;
+    min-height: 7rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.settings-input-label {
+    float: left;
+    font-weight: bolder;
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.settings-infos-label {
+    width: 40%;
+    margin-right: 4rem;
+    float: right;
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.settings-infos-label1 {
+    width: 40%;
+    margin-right: 4rem;
+    float: right;
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-bottom: 10em;
+}
+
+.settings-container {
+    display: flex;
+    background-color: #e9ddcb;
+    max-width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 4rem;
+    width: 55rem;
+    height: 94rem;
+    margin: auto;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.settings-input-container {
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.settings-buttons-container {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.settings-body hr {
+    color: #ffff;
+    border-color: #D9C3A9;
+    position: relative;
+    top: -2.9rem;
+    margin-top: 5rem;
+    opacity: 0.5;
+}
+
+.settings-inputs-line {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.settings-input-container input {
+    box-sizing: border-box;
+    width: 40%;
+    max-width: 80%;
+    padding: 10px;
+    margin-right: 4rem;
+    float: right;
+    border-radius: 30px;
+    border: none;
+    background-color: #EDEDED;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.setting_profilePicture_image {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    outline: 2px solid #aa785b;
+    border-radius: 50%;
+    margin-left: 2.5rem;
+}
+
+.setting_profilePicture_edit-icon {
+    width: 2.2rem;
+    position: relative;
+    bottom: 0.8rem;
+    right: 2.6rem;
+}
+
+.settings-btn:hover {
+    cursor: pointer;
+}
+
+.setting_profilePicture_image:hover,
+.setting_profilePicture_edit-icon {
+    cursor: pointer;
+}
+
+.profPic-label:hover .setting_profilePicture_image {
+    filter: brightness(120%);
+}
+
+.settings-pfp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.settings-btn {
+    background-color: #77503A;
+    position: relative;
+    left: 23.5%;
+    margin-top: 2.5rem;
+    margin-left: 3rem;
+    margin-bottom: 2.5rem;
+    max-width: 80%;
+    color: #FFFFFF;
+    font-family: 'Antonio', sans-serif;
+    font-size: 18px;
+    width: 7rem;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 9px 10px;
+    border: 0px;
+}
+
+.settings-pfp-btn,
+.settings-edit-btn {
+    background-color: #77503A;
+    color: #FFFFFF;
+    font-family: 'Antonio', sans-serif;
+    font-size: 18px;
+    width: 7rem;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 8px 10px;
+    margin-top: 0.6rem;
+    margin-left: 0.6rem;
+    border: 0px;
+}
+
+.settings-pfp-btn:hover,
+.settings-btn:hover,
+.settings-edit-btn:hover {
+    cursor: pointer;
+    background-color: #83614e;
+}
+
+.settings-pfp-btn:disabled {
+    background-color: #aa785b;
+    cursor: not-allowed;
+    opacity: 0.9;
+}
+
+.settings-edit-btn {
+    margin-bottom: 2rem;
+    margin-left: 85%;
+    margin-right: 2rem;
+}
+
+.settings-account-infos {
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    margin-right: auto;
+    font-size: 25px;
+}
+
+.settings-body h1 {
+    position: relative;
+    bottom: 4rem;
+    margin-left: 2rem;
+    margin-right: auto;
+    font-size: 34px;
+}
+
+.settings-input-container .settings-userID-missing,
+.settings-input-container .settings-email-missing {
+    border: 1px solid #ff0000;
+}
+
+.settings-logout-msg {
+    font-size: 12px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    margin-left: auto;
+    margin-top: 0.6rem;
+    margin-right: 8%;
+}
+
+.settings-success-msg {
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    left: 66%;
+    max-width: 50%;
+    font-weight: bolder;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    color: #0ccf36;
+}
+
+.settings-error-msg {
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    left: 66%;
+    max-width: 50%;
+    font-weight: bolder;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    color: #ED4337;
+}
+
+.settings-error-psw {
+    font-size: 14px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    left: 53%;
+    max-width: 100%;
+    font-weight: bolder;
+    margin-top: 2.5rem;
+    margin-right: auto;
+    color: #ED4337;
+}
+
+.settings-container-error input {
+    border: 1px solid rgb(255, 33, 33);
+}
+
+/* Modal */
+.settings-container .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.settings-container .modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #929191;
+    border-radius: 15px;
+    width: 25%;
+    height: 23%;
+}
+
+.settings-body .modal-hr {
+    position: relative;
+    top: 1rem;
+    margin-top: 0;
+}
+
+.settings-container .modal .close {
+    margin-left: auto;
+    position: relative;
+    top: -2rem;
+}
+
+.settings-container .button-container {
+    margin-top: 15%;
+    margin-left: auto;
+}
+
+.button-container-btn:hover {
+    background-color: #83614e;
+}
+
+.button-container-btn {
+    cursor: pointer;
+    margin-left: 2rem;
+    width: 7rem;
+    padding: 9px 7px;
+    background-color: #77503A;
+    border: 0px;
+    color: #FFFFFF;
+}
+
+.settings-container .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.settings-container .close:hover,
+.settings-container .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.settings-container .show {
+    display: block;
+}

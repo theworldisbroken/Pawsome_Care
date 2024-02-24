@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Inter&display=swap');
+
+.login-body,
+.signup-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.login-body h1,
+.signup-body h1 {
+  font-family: 'Antonio', sans-serif;
+  font-size: 2rem;
+  color: #898989;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.wrapper {
+  width: 23rem;
+  padding: 1.25rem 2.5rem;
+  margin-top: 10rem;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.content-box-login {
+  background-color: white;
+  margin-top: 10rem;
+  border-radius: 20px;
+  width: 16%;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+}
+
+.content-box-signup {
+  background-color: white;
+  margin-top: 10rem;
+  border-radius: 20px;
+  width: 16%;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+}
+
+.registration-confirmation-wrapper{
+  max-width: 90%;
+  padding: 1.25rem 2.5rem;
+  margin-top: 10rem;
+  border-radius: 30px;
+  text-align: center;
+  background-color: #f1e8e8;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.input-container input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 30px;
+  border: none;
+  background-color: #EDEDED;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-container-error input{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 30px;
+  border: 1px solid rgb(255, 33, 33);
+  background-color: #EDEDED;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.remember-forgotpwd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remember-forgotpwd input {
+  cursor: pointer;
+}
+
+.icon-username {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-username img{
+  width: 4rem;
+}
+
+.icon-username input {
+  width: 70%;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon-username .input-container-error input{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 30px;
+  border: 1px solid rgb(255, 33, 33);
+  background-color: #EDEDED;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-body button,
+.signup-body button {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 30px;
+  border: none;
+  color: #000000;
+  background-color:#f5acac;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+} 
+
+.login-body button:hover,
+.signup-body button:hover {
+  background-color:  #f3b5b5;
+}
+
+.signin,
+.login {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+
+}
+
+.signin a,
+.login a {
+  text-decoration: none;
+  color: #F8BCBC;
+  font-weight: bold;
+}
+
+.forgotpwd a:hover,
+.login a:hover {
+  text-decoration: underline;
+}
+
+.pending_message{
+  color: #decd87
+}
+
+.login_error{
+  color: #ff0000;
+}
+
+.signup-error-message{
+  font-size: 14.5px;
+  color: #ff0000;
+}
+
+.email-sent-image{
+  width: 14rem;
+  max-width: 100%;
+}
+
+.registration-confirm-message{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  max-width: 100%;
+  font-size: 22px;
+  padding: 2rem;
+}

@@ -1,0 +1,34 @@
+
+.verification-body {
+    display: flex;
+    text-align: center;
+    background-color:  #D9C3A9;
+    height: 57.6rem;
+}
+
+.verification-wrapper{
+    display: flex;
+    background-color: #e9ddcb;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height: 30rem;
+    margin: auto;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.verification-body p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 100%;
+    font-size: 24px;
+    padding: 2rem;
+}
+
+.verifcation_error_img,
+.verifcation_success_img{
+    width: 14rem;
+    max-width: 100%;
+}

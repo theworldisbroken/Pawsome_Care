@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio&family=Inter&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #865d45;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  font-family: 'Antonio', sans-serif;
+}
+
+.show {
+  display: inline;
+}
+
+.hide {
+  display: none;
+}
+
+.navbar-image {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.navbar-image:hover {
+  cursor: pointer;
+  outline: 2px solid #ffffff;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 960px;
+  height: 6rem;
+  margin: auto;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  margin-left: 1rem;
+}
+
+.navbar-open-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.navbar-close-btn {
+  position: fixed;
+  width: 3.5rem;
+  height: 3.5rem;
+  top: 0;
+  right: 0;
+}
+
+
+.right-items {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+
+/**
+*Nav-Elements 
+*/
+.nav-element {
+  font-size: 16px;
+  margin: 2.4rem 1rem 1rem 1rem;
+  position: relative;
+  bottom: 0.6rem;
+}
+
+.nav-element a:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.267);
+  border-radius: 30px;
+  padding: 10px 10px;
+}
+
+.login-btn {
+  display: inline-block;
+  padding: 8px 5px;
+  line-height: 1;
+  border: 2px solid white;
+  border-radius: 30px;
+}
+
+.login-btn:hover {
+  display: inline-block;
+  padding: 8px 5px;
+  line-height: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(252, 252, 252, 0.9);
+  border-radius: 30px;
+}
+
+.logout-btn {
+  font-size: 17px;
+  background-color: transparent;
+  /* Hintergrundfarbe des Buttons */
+  border: none;
+  color: #333;
+  /* Textfarbe des Buttons */
+  cursor: pointer;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: start;
+}
+
+/* Dropdown-Button-Stil */
+.dropdown-btn {
+  font-size: 17px;
+  margin: 2.4rem 1rem 1rem 1rem;
+  position: relative;
+  bottom: 0.6rem;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  border-radius: 30px;
+}
+
+.dropdown-btn:hover {
+  background-color: rgba(0, 0, 0, 0.267);
+  border-radius: 30px;
+  font-style: bold;
+}
+
+.logout-btn:hover {
+  background-color: rgba(186, 95, 95, 0.5);
+  /* Hintergrundfarbe bei Hover */
+  border-radius: 30px;
+}
+
+/* Dropdown-Inhalt-Stil */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  /* Hintergrundfarbe des Dropdown-Inhalts */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  /* Schatten des Dropdowns */
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.dropdown-content a,
+.dropdown-content button {
+  color: #865d45;
+  /* Textfarbe der Dropdown-Elemente */
+  padding: 10px 20px;
+  display: block;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover,
+.dropdown-content button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  /* Hintergrundfarbe bei Hover */
+  border-radius: 8px;
+}
+
+/* Dropdown-Container-Stil (optional) */
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+/* Dropdown öffnen 
+das es untereinander erscheint*/
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+
+}

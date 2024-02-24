@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Inter&display=swap');
+
+body {
+  background-color: #D9C3A9;
+}
+
+.profile-body {
+  font-family: 'Inter', sans-serif;  
+  max-width: 960px;
+  margin:  auto;
+  background-color: #F4EDE5;
+  color: #333;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 0;
+}
