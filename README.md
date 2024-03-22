@@ -4,7 +4,7 @@
 - Pawsome Care
 
 ## Projektbeschreibung:
-- Ein Single-Page-Application für Haustiersitting mit einem Forum als Nebenfunktion und anderen Funktionen.
+- Ein Single-Page-Application für Haustiersitting mit einem Forum als Nebenfunktion und anderen Funktionenm von 6 Personen entwickeln.
 
 ## Technologie-Stack:
 - Datenbank: MongoDB(https://www.mongodb.com/try/download/community)
