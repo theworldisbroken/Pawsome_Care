@@ -1,5 +1,5 @@
 # Pawsome Care
-### **Note**: this project was originally created on a special University git-repository, the reason why it only has few commits.
+### **Note**: this project was originally created on a special University git-repository (with 460 commits), the reason why it only has few commits here.
 
 # Preview
 <img width="951" alt="Screenshot 2024-03-29 210952" src="https://github.com/theworldisbroken/Pet-Sitting-Project/assets/155479346/2cad5c7e-7d8d-45b6-b3cd-21baa76e5ba6">
